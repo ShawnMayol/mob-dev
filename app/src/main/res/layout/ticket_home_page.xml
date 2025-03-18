@@ -1,8 +1,8 @@
-
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/ticket_home_background"
     android:orientation="vertical"
     tools:context=".TicketHomePage">
@@ -11,25 +11,34 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#eba901"
         android:gravity="center_vertical"
+        android:layout_marginTop="20dp"
         android:padding="16dp">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:contentDescription="Profile Picture"
+            android:src="@drawable/setting"/>
 
         <TextView
             android:id="@+id/userGreeting"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="HI ANNA!"
-            android:textColor="#FFFFFF"
+            android:text="HI, ANNA!"
             android:textSize="24sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:layout_marginLeft="50dp"/>
 
         <ImageView
             android:layout_width="40dp"
             android:layout_height="40dp"
+            android:layout_marginRight="20dp"
             android:contentDescription="Profile Picture"
-            android:scaleType="centerCrop" />
+            android:scaleType="centerCrop"
+            android:src="@drawable/circle"/>
     </LinearLayout>
 
     <!-- Subtitle -->
@@ -43,12 +52,15 @@
         android:textStyle="bold" />
 
     <!-- Search Section -->
+
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/search_background"
         android:orientation="horizontal"
-        android:padding="16dp">
+        android:padding="1dp"
+        android:layout_margin="20dp">
 
         <SearchView
             android:id="@+id/searchView"
@@ -59,8 +71,14 @@
             android:iconifiedByDefault="false"
             android:queryHint="Search" />
     </LinearLayout>
-
-
+    <ListView
+        android:id="@+id/searchResultsListView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="1dp"
+        android:padding="8dp"
+        android:visibility="gone"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -87,12 +105,20 @@
                     android:gravity="center"
                     android:orientation="vertical">
 
-                    <ImageView
-                        android:id="@+id/airplane"
+                    <androidx.cardview.widget.CardView
                         android:layout_width="160dp"
                         android:layout_height="160dp"
-                        android:scaleType="fitXY"
-                        android:src="@drawable/flights_image" />
+                        app:cardCornerRadius="20dp"
+                        app:cardElevation="5dp">
+
+                        <ImageView
+                            android:id="@+id/airplane"
+                            android:layout_width="160dp"
+                            android:layout_height="160dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/flights_image" />
+
+                    </androidx.cardview.widget.CardView>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -111,12 +137,20 @@
                     android:gravity="center"
                     android:orientation="vertical">
 
-                    <ImageView
-                        android:id="@+id/bus"
+                    <androidx.cardview.widget.CardView
                         android:layout_width="160dp"
                         android:layout_height="160dp"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/bus_image" />
+                        app:cardCornerRadius="20dp"
+                        app:cardElevation="5dp">
+
+                        <ImageView
+                            android:id="@+id/bus"
+                            android:layout_width="160dp"
+                            android:layout_height="160dp"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/bus_image" />
+
+                    </androidx.cardview.widget.CardView>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -145,12 +179,20 @@
                 android:gravity="center"
                 android:orientation="vertical">
 
-                <ImageView
-                    android:id="@+id/train"
+                <androidx.cardview.widget.CardView
                     android:layout_width="160dp"
                     android:layout_height="160dp"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/train_image" />
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="5dp">
+
+                    <ImageView
+                        android:id="@+id/train"
+                        android:layout_width="160dp"
+                        android:layout_height="160dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/train_image" />
+
+                </androidx.cardview.widget.CardView>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -169,12 +211,20 @@
                 android:gravity="center"
                 android:orientation="vertical">
 
-                <ImageView
-                    android:id="@+id/hotel"
+                <androidx.cardview.widget.CardView
                     android:layout_width="160dp"
                     android:layout_height="160dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/hotel_image" />
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="5dp">
+
+                    <ImageView
+                        android:id="@+id/hotel"
+                        android:layout_width="160dp"
+                        android:layout_height="160dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/hotel_image" />
+
+                </androidx.cardview.widget.CardView>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -202,12 +252,20 @@
                 android:gravity="center"
                 android:orientation="vertical">
 
-                <ImageView
-                    android:id="@+id/mytrips"
+                <androidx.cardview.widget.CardView
                     android:layout_width="160dp"
                     android:layout_height="160dp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/my_trips_image" />
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="5dp">
+
+                    <ImageView
+                        android:id="@+id/mytrips"
+                        android:layout_width="160dp"
+                        android:layout_height="160dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/my_trips_image" />
+
+                </androidx.cardview.widget.CardView>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -226,12 +284,20 @@
                 android:gravity="center"
                 android:orientation="vertical">
 
-                <ImageView
-                    android:id="@+id/settings"
+                <androidx.cardview.widget.CardView
                     android:layout_width="160dp"
                     android:layout_height="160dp"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/settings_image" />
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="5dp">
+
+                    <ImageView
+                        android:id="@+id/settings"
+                        android:layout_width="160dp"
+                        android:layout_height="160dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/settings_image" />
+
+                </androidx.cardview.widget.CardView>
 
                 <TextView
                     android:layout_width="wrap_content"
