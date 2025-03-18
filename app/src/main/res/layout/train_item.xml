@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/card_background"
+    android:padding="16dp"
+    android:orientation="vertical">
+
+    <!-- Train Route -->
+    <TextView
+        android:id="@+id/trainRoute"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FROM → TO"
+        android:textStyle="bold"
+        android:textSize="16sp"/>
+
+    <!-- Travel Date -->
+    <TextView
+        android:id="@+id/travelDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Travel Date: 10/05/2025"
+        android:textSize="14sp"
+        android:textColor="#555555"/>
+
+    <!-- Train Company -->
+    <TextView
+        android:id="@+id/trainCompany"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rapid Rail"
+        android:textColor="#888888"
+        android:textSize="14sp"/>
+
+    <!-- Price -->
+    <TextView
+        android:id="@+id/trainPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="$30"
+        android:textSize="16sp"
+        android:textStyle="bold"/>
+</LinearLayout>

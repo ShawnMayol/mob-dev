@@ -1,10 +1,126 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SearchHotel">
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    android:padding="16dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- Header Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="#FFA000"
+        android:padding="16dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SEARCH HOTEL"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:gravity="center"/>
+    </LinearLayout>
+
+    <!-- Destination -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enter Destination"
+        android:textStyle="bold"
+        android:paddingTop="8dp"/>
+
+    <EditText
+        android:id="@+id/destinationEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_background"
+        android:padding="10dp"
+        android:hint="Enter City or Location"
+        android:inputType="text"/>
+
+    <!-- Check-in and Check-out Dates -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Check-in Date"
+        android:textStyle="bold"
+        android:paddingTop="8dp"/>
+
+    <EditText
+        android:id="@+id/checkInDateEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_background"
+        android:padding="10dp"
+        android:hint="Select Check-in Date"
+        android:focusable="false"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Check-out Date"
+        android:textStyle="bold"
+        android:paddingTop="8dp"/>
+
+    <EditText
+        android:id="@+id/checkOutDateEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_background"
+        android:padding="10dp"
+        android:hint="Select Check-out Date"
+        android:focusable="false"/>
+
+    <!-- Number of Guests -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Number of Guests"
+        android:textStyle="bold"
+        android:paddingTop="8dp"/>
+
+    <EditText
+        android:id="@+id/guestsEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_background"
+        android:padding="10dp"
+        android:hint="Enter number of guests"
+        android:inputType="number"/>
+
+    <!-- Search Button -->
+    <Button
+        android:id="@+id/searchHotelBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FFA000"
+        android:textColor="#FFFFFF"
+        android:text="Search"
+        android:layout_marginTop="16dp"/>
+
+    <!-- ListView for Hotel Results -->
+    <ListView
+        android:id="@+id/hotelListView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="16dp"/>
+
+    <!-- Book Hotel Button (Initially Hidden) -->
+    <Button
+        android:id="@+id/bookHotelBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="BOOK HOTEL"
+        android:textSize="16sp"
+        android:backgroundTint="#FFA000"
+        android:textColor="#FFFFFF"
+        android:layout_margin="16dp"
+        android:padding="12dp"
+        android:visibility="gone"/>
+</LinearLayout>

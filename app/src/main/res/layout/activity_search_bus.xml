@@ -1,10 +1,109 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SearchBus">
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    android:padding="16dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- Header Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="#FFA000"
+        android:padding="16dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SEARCH BUS"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:gravity="center"/>
+    </LinearLayout>
+
+    <!-- Search Fields -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Departure City"
+        android:textStyle="bold"
+        android:paddingTop="8dp"/>
+
+    <EditText
+        android:id="@+id/fromEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_background"
+        android:padding="10dp"
+        android:hint="Enter Departure City"
+        android:inputType="text"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Arrival City"
+        android:textStyle="bold"
+        android:paddingTop="8dp"/>
+
+    <EditText
+        android:id="@+id/toEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_background"
+        android:padding="10dp"
+        android:hint="Enter Arrival City"
+        android:inputType="text"/>
+
+    <!-- Travel Date -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Travel Date"
+        android:textStyle="bold"
+        android:paddingTop="8dp"/>
+
+    <EditText
+        android:id="@+id/travelDateEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_background"
+        android:padding="10dp"
+        android:hint="Select Travel Date"
+        android:focusable="false"/>
+
+    <!-- Search Button -->
+    <Button
+        android:id="@+id/searchBusBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FFA000"
+        android:textColor="#FFFFFF"
+        android:text="Search"
+        android:layout_marginTop="16dp"/>
+
+    <!-- ListView for Bus Results -->
+    <ListView
+        android:id="@+id/busListView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="16dp"/>
+
+    <!-- Book Bus Button (Initially Hidden) -->
+    <Button
+        android:id="@+id/bookBusBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="BOOK BUS"
+        android:textSize="16sp"
+        android:backgroundTint="#FFA000"
+        android:textColor="#FFFFFF"
+        android:layout_margin="16dp"
+        android:padding="12dp"
+        android:visibility="gone"/>
+</LinearLayout>
